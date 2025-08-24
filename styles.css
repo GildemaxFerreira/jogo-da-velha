@@ -1,0 +1,84 @@
+/* Configurações gerais da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo do Tabuleiro */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px; /* Espaçamento que cria as linhas do tabuleiro */
+    margin: 20px auto;
+}
+
+/* Estilo de cada célula */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem; /* Tamanho do 'X' e 'O' */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cell:hover {
+    background-color: #d0d0d0;
+}
+
+/* Cores para X e O */
+.cell.x {
+    color: #007BFF; /* Azul */
+}
+
+.cell.o {
+    color: #DC3545; /* Vermelho */
+}
+
+
+/* Estilo da área de status e botão */
+.status-display {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    height: 30px; /* Altura fixa para não "pular" */
+    color: #555;
+}
+
+.restart-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #28a745; /* Verde */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.restart-button:hover {
+    background-color: #218838;
+}
